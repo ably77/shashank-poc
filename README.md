@@ -53,9 +53,9 @@ spec:
   source:
   # -------------------------------------------------
     ## change me to your own public repo
-    repoURL: https://github.com/solo-io/solo-cop
+    repoURL: https://github.com/ably77/shashank-poc
     ## change me to your own public repo
-    path: blogs/gloo-mesh-argocd/easybutton/workloads
+    path: workloads
   # -------------------------------------------------
     targetRevision: HEAD
     directory:
