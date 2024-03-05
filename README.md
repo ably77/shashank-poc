@@ -1,5 +1,5 @@
 # prereq
-- cluster deployed
+- cluster deployed with context named `gloo`
 
 # set variables
 ```bash
