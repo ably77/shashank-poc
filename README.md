@@ -39,6 +39,8 @@ kubectl port-forward svc/argocd-server -n argocd 9999:443 --context "${MY_CLUSTE
 
 # deploy an argo application
 
+The following Argo Application will deploy the contents in the [/workloads](https://github.com/ably77/shashank-poc/tree/main/workloads/bookinfo) directory in this repo
+
 ```bash
 kubectl apply --context "${MY_CLUSTER_CONTEXT}" -f - <<EOF
 apiVersion: argoproj.io/v1alpha1
@@ -73,4 +75,10 @@ spec:
         factor: 2
         maxDuration: 3m0s
 EOF
+```
+
+Check to see that bookinfo has been deployed
+```bash
+kubectl get pods -n bookinfo-frontends --context "${MY_CLUSTER_CONTEXT}" && \
+kubectl get pods -n bookinfo-backends --context "${MY_CLUSTER_CONTEXT}"
 ```
